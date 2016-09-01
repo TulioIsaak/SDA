@@ -4,7 +4,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use work.type_package.all;
 
-type bank is array(31 downto 0) of register;
+package bank is
+	type bank is array(31 downto 0) of register;
+end bank;
+
+
 
 entity main is
 
