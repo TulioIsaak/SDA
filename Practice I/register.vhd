@@ -2,6 +2,7 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use work.type_package.all;
 
 entity register is
 	generic	(
@@ -14,7 +15,7 @@ entity register is
 		reset  	: in std_logic;
 		dout	: out std_logic_vector ((SIZE-1) downto 0)
 	);
-end entity;
+end register;
 
 architecture behv_register of register is
 begin
