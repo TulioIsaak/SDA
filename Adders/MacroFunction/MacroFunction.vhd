@@ -21,18 +21,16 @@ end MacroFunction;
 
 --comportamento
 architecture behv_MacroFunction of MacroFunction is
-
-	signal g, p, c: std_logic_vector((N-1) downto 0); --sinais para generate, propagate e carry
 	signal atemp, btemp, stemp: std_logic_vector((N-1) downto 0);
 begin	
 
 process(clk)
 	begin	
-			if(rising_edge(clk)) then
-				atemp <= a;
-				btemp <= b;
-				s <= atemp + btemp + cin;
-			end if;
+		if(rising_edge(clk)) then
+			atemp <= a;
+			btemp <= b;
+			s <= atemp + btemp + cin;
+		end if;
 	end process;
 	
 end behv_MacroFunction;
